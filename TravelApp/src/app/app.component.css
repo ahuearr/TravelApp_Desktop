@@ -1,0 +1,40 @@
+.clearfix{
+	float: none;
+	clear:both;
+	text-decoration: none;
+	list-style: none;
+}
+
+body{
+	font-family: Helvetica, Arial;
+}
+
+#content{
+	width:80%;
+	min-height: 500px;
+	margin:0 auto;
+	margin-top:20px;
+	border: 1px solid #ccc;
+	border-radius:5px;
+	box-shadow: 0px 0px 5px #ddd;
+}
+
+header{
+	padding:15px;
+	background: #1976D2
+}
+
+.btn{
+	font-size: 13px;
+	border: 1px solid #ccc;
+	border-color: #A176D2;
+	border-radius: 4px;
+	box-shadow: 0px 0px 5px #ddd;
+	padding: 5px;
+	text-decoration: none;
+	color:white;
+	background: #900000;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as CB from 'cloudboost';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css', '../app.component.css']
 })
-export class LoginComponent {
-  title = 'Bienvenido a tu aplicacion para la gestion de viajes en grupo';
+export class LoginComponent implements OnInit {
+
+  ngOnInit(): void {
+  }
 }
