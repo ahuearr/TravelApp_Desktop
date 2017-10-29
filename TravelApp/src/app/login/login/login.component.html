@@ -1,11 +1,11 @@
 <form #formLogin="ngForm" (ngSubmit)="onSubmit()">
 	<label>Usuario</label>
 	<p>
-		<input type="text" id="usuario" ngControl="usuario" required/>
+		<input type="text" id="usuario" ngControl="usuario" [(ngModel)]="usuario" name="usuario" required/>
 	</p>
 	<label>Contraseña</label>
 	<p>
-		<input type="password" id="password" ngControl="password" required/>
+		<input type="password" id="password" ngControl="password" [(ngModel)]="password" name="password" required/>
 	</p>
 	
 	<input type="submit" value="Acceder" class="btn">

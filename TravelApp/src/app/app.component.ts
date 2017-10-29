@@ -7,5 +7,8 @@ import * as CB from 'cloudboost';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Bienvenido a tu aplicacion para la gestion de viajes en grupo';
+  
+  constructor() {
+    CB.CloudApp.init('tvrfziynnvci', '9d6b774d-ccf2-4cdb-a7e9-5eacbaaebe96');  
+  }
 }

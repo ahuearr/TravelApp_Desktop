@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 
 
 const routes = [
-  {'path': 'login', name: 'login', loadChildren: 'app/login/login.module#LoginModule'},
+  {'path': 'login', name: 'login', loadChildren: 'app/login/login/login.module#LoginModule'},
   ];
 
 @NgModule({
