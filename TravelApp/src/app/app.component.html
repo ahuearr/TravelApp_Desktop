@@ -1,2 +1,14 @@
-<h1>Bienvenido a tu aplicacion para la gestion de viajes en grupo</h1>
-<router-outlet></router-outlet>
+<div id="page">
+  <div id="header">
+    <h1>Bienvenido a tu aplicacion para la gestion de viajes en grupo</h1>
+    <div id="menu">
+      <div id="loginOption" class="option">
+        <a routerLink="login" routerLinkActive="act">Login</a>
+        <a routerLink="createAccount" routerLinkActive="act">Crear cuenta</a>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
