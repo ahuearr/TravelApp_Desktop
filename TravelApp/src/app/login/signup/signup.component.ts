@@ -50,6 +50,7 @@ export class SignupComponent implements OnInit {
     user.signUp({
       success: user => {
         this.userCreationSuccessful=true;
+        user.logOut();
       },
       error: err => {
         this.validationErrors.push(err.response.data.error);
