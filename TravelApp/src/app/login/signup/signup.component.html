@@ -1,25 +1,27 @@
 <form #formSignUp="ngForm" (ngSubmit)="onSubmit()">
-  <label>Usuario</label>
-  <p>
-    <input type="text" id="usuario" ngControl="usuario" [(ngModel)]="usuario" name="usuario" required/>
-  </p>
-  <label>Correo electrónico</label>
-  <p>
-    <input type="email" id="email" ngControl="email" [(ngModel)]="email" name="email" [formControl]="emailControl" required email />
-  </p>
-  <label>Contraseña</label>
-  <p>
-    <input type="password" id="password" ngControl="password" [(ngModel)]="password" name="password" required/>
-  </p>
-  <label>Confirmar Contraseña</label>
-  <p>
-    <input type="password" id="confirmPassword" ngControl="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required/>
-  </p>
-  <input type="submit" value="Crear cuenta" class="btn"/>
-  <div *ngFor="let error of validationErrors">
-    {{error}}
+  <div *ngIf="!userCreationSuccessful">
+    <label>Usuario</label>
+    <p>
+      <input type="text" id="usuario" ngControl="usuario" [(ngModel)]="usuario" name="usuario" required/>
+    </p>
+    <label>Correo electrónico</label>
+    <p>
+      <input type="email" id="email" ngControl="email" [(ngModel)]="email" name="email" [formControl]="emailControl" required email />
+    </p>
+    <label>Contraseña</label>
+    <p>
+      <input type="password" id="password" ngControl="password" [(ngModel)]="password" name="password" required/>
+    </p>
+    <label>Confirmar Contraseña</label>
+    <p>
+      <input type="password" id="confirmPassword" ngControl="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required/>
+    </p>
+    <input type="submit" value="Crear cuenta" class="btn"/>
+    <p *ngFor="let error of validationErrors" class="error">
+      {{error}}
+    </p>
   </div>
-  <div *ngIf="userCreationSuccessful">
+  <p *ngIf="userCreationSuccessful" class="successful">
     El usuario {{usuario}} se ha creado correctamente. Puede proceder a hacer login
-  </div>
+  </p>
 </form>
