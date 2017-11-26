@@ -1,7 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<div id="page">
+  <div id="header">
+    <h1>Bienvenido a tu aplicacion para la gestion de viajes en grupo</h1>
+    <div id="menu">
+      <div id="loginOption" class="option">
+        <a routerLink="login" routerLinkActive="act">Login</a>
+        <a routerLink="signup" routerLinkActive="act">Crear cuenta</a>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>

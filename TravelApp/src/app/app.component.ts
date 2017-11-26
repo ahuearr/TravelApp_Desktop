@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as CB from 'cloudboost';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
+  constructor() {
+    CB.CloudApp.init('tvrfziynnvci', '9d6b774d-ccf2-4cdb-a7e9-5eacbaaebe96');  
+  }
 }

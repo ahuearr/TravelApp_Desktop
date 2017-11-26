@@ -1,0 +1,13 @@
+<form #formForgot="ngForm" (ngSubmit)="onSubmit()">
+  <label>Para recuperar su contraseña, introduzca su correo electrónico</label>
+  <p>
+    <input type="email" id="email" ngControl="email" [(ngModel)]="email" name="email" [formControl]="emailControl" required email />
+  </p>
+  <input type="submit" value="Resetar contraseña" class="btn"/>
+  <div *ngFor="let error of validationErrors" class="error">
+    {{error}}
+  </div>
+  <div *ngIf="emailCorrect" class="successful">
+    Se ha enviado un email
+  </div>
+</form>
