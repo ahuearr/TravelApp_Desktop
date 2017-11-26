@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
+import { GlobalService} from "../../global.service";
 import * as CB from 'cloudboost';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
+  providers: [GlobalService]
 })
 export class SignupComponent implements OnInit {
 
@@ -19,13 +21,14 @@ export class SignupComponent implements OnInit {
 
   public userCreationSuccessful:boolean;
 
-  constructor() {
+  constructor(private _globalService: GlobalService) {
     this.emailControl =
       new FormControl('email', Validators.compose([Validators.email]));
     this.userCreationSuccessful=false;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this._globalService.removeCurrentUser();
   }
 
   onSubmit(){

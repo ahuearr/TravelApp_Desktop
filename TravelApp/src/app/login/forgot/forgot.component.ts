@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
+import { GlobalService} from "../../global.service";
 import * as CB from 'cloudboost';
 
 @Component({
   selector: 'app-forgot',
   templateUrl: './forgot.component.html',
-  styleUrls: ['./forgot.component.css']
+  styleUrls: ['./forgot.component.css'],
+  providers: [GlobalService]
 })
 export class ForgotComponent implements OnInit {
 
@@ -15,13 +17,14 @@ export class ForgotComponent implements OnInit {
 
   public emailCorrect:boolean;
 
-  constructor() {
+  constructor(private _globalService: GlobalService) {
     this.emailControl =
       new FormControl('email', Validators.compose([Validators.email]));
     this.emailCorrect=false;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this._globalService.removeCurrentUser();
   }
 
   onSubmit(){
